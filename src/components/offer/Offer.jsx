@@ -20,21 +20,21 @@ export const Offer = () => {
                     <img className='product-logo' alt='logo' src={lapiz}/>
                     <h3 className='product-name'>UI/UX Design</h3>
                     <p className='product-description'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
-                    <a className='product-link' href='#'>Get started</a>
+                    <a className='product-link' href='https://beamish-starlight-4723bc.netlify.app/'>Get started</a>
                     
                 </div>
                 <div className='products'>
                     <img className='product-logo' alt='logo' src={codigo}/>
                     <h3 className='product-name'>Front End</h3>
                     <p className='product-description'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
-                    <a className='product-link' href='#'>Get started</a>
+                    <a className='product-link' href='www.linkedin.com/in/gadetru'>Get started</a>
                     
                 </div>
                 <div className='products'>
                     <img className='product-logo' alt='logo' src={datos}/>
                     <h3 className='product-name'>Back End</h3>
                     <p className='product-description'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
-                    <a className='product-link' href='#'>Get started</a>
+                    <a className='product-link' href='https://legacy.devchallenges.io/'>Get started</a>
                     
                 </div>
             </div>
@@ -61,7 +61,7 @@ export const Offer = () => {
                     <p className='materia'>Front End application</p>
                     <p className='eslogan'>Juice product homepage</p>
                     <div className='see-more' >
-                        <a href='#'>see more  <img className='flecha' alt='flecha' src={flecha}/></a>
+                        <a href='https://github.com/gadetru'>see more  <img className='flecha' alt='flecha' src={flecha}/></a>
                         
                     </div>
                     
