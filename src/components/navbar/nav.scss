@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Heebo'; 
+    src: url('../../fonts/Heebo-VariableFont_wght.ttf');
+   
+  }
+@font-face {
+    font-family: 'Montserrat'; 
+    src: url('../../fonts/Montserrat-VariableFont_wght.ttf');
+   
+  }
+@font-face {
+    font-family: 'Poppins'; 
+    src: url('../../fonts/Poppins-Regular.ttf');
+   
+  }
+
+  $Gray-1: #333;
+
+.navbar-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+    color: $Gray-1;
+
+
+    .title{
+        font-family: 'Heebo';
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        //background-color: rgb(136, 217, 217);
+        width: 20%;
+        text-align: center;
+
+        // ESTAS @MEDIA ESTÁN PARA AJUSTAR LOS TAMAÑOS DEL NAVBAR 
+
+        @media(max-width:780px){
+            width: 40%;
+
+        }
+
+        @media screen and (min-width: 780px) and (max-width: 1200px) {
+            width: 30%;
+        }
+
+    }
+
+    // ESTE DIV ES A MODO CONTENEDOR DE TODOS LOS ELEMENTOS UTILIZADOS PARA CREAR EL BOTÓN Y LA LISTA DE LINKS
+
+    .links-boton{
+         width: 60%;
+        //background-color: #bca4a4;
+
+
+        // CON ESTAS @MEDIA TRATO DE ESTILIZAR AL MAXIMO EL NAV  
+
+        @media(max-width:780px){
+            width: 20%;
+
+        }
+
+        @media screen and (min-width: 780px) and (max-width: 1200px) {
+            width: 70%;
+        }
+    }
+    .navbar{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        list-style-type: none;
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        
+    
+        a {
+            text-decoration: none; 
+            /* Estilo al pasar el mouse sobre los enlaces */
+            color: $Gray-1;
+            a:hover {
+                text-decoration: underline; /* Agrega subrayado al pasar el mouse */
+                color: #555; /* Cambia el color al pasar el mouse */
+            }
+            
+        }
+    }
+
+               // aqui estamos intentando dar estilos al navbar para que sea oculto y burger
+   
+            //estilos del botón burger
+            
+            /* nav-icon-5 */
+            .nav-icon-5{
+           
+                width: 35px;
+                height: 30px;
+                margin: 10px 10px;
+                position: relative;
+                cursor: pointer;
+                display: inline-block;
+            
+                &.open{
+                    z-index: 2;
+                }
+                
+            }
+            .nav-icon-5 span{
+                background-color:$Gray-1;
+                position: absolute;
+                border-radius: 2px;
+                transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+                width:100%;
+                height: 4px;
+                transition-duration: 500ms
+            }
+            .nav-icon-5 span:nth-child(1){
+                top:0px;
+                left: 0px;
+            }
+            .nav-icon-5 span:nth-child(2){
+                top:13px;
+                left: 0px;
+                opacity:1;
+            }
+            .nav-icon-5 span:nth-child(3){
+                bottom:0px;
+                left: 0px;
+            }
+            .nav-icon-5:not(.open):hover span:nth-child(1){
+                transform: rotate(-3deg) scaleY(1.1);
+            }
+            .nav-icon-5:not(.open):hover span:nth-child(2){
+                transform: rotate(3deg) scaleY(1.1);
+            }
+            .nav-icon-5:not(.open):hover span:nth-child(3){
+                transform: rotate(-4deg) scaleY(1.1);
+            }
+            .nav-icon-5.open span:nth-child(1){
+                transform: rotate(45deg);
+                top: 13px;
+            }
+            .nav-icon-5.open span:nth-child(2){
+                opacity:0;
+            }
+            .nav-icon-5.open span:nth-child(3){
+                transform: rotate(-45deg);
+                top: 13px;
+            }
+    
+            .links{
+
+                padding: 0;
+                position: absolute;
+                top: -1000px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                z-index: 2;
+                
+    
+    
+                @media(min-width:780px){
+                    position: initial;
+                    margin: 0;
+    
+                }
+    
+     
+            }
+            .links.active{
+                padding: 0;
+                width: 90%;
+                display: block;
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                top: 30%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: 2;
+                transition: all .4s ease;
+                li{
+                    width: 100%;
+                    height: 4rem;
+    
+                    box-sizing: border-box;
+                }
+            }
+         
+    
+            .icon{
+                @media(min-width: 780px){
+                    display: none;
+                }
+            }
+
+            // caja que crea la pantalla del botón burger
+        .initial{
+            position: absolute;
+             background-color: #fff;
+            //background-color: rgb(5, 5, 59);
+            top: -1500px;
+            left: 0;
+            width: 100%;   
+            height: 100%; 
+             z-index: 1;
+            transition: all .4s ease ;
+            &.active{
+            top: 0px;
+            left: 0px;
+            width: 100%;   
+            height: 100%;
+            z-index: 1;
+            //padding-bottom: 1200px;
+            
+            }
+            
+
+        }
+        //fin del navbar
+}

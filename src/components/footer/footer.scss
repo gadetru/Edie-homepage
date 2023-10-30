@@ -1,0 +1,216 @@
+ 
+.contenedor-footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #100E1D;
+    padding-top: 50px;
+    margin-top: 100px;
+    padding-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    .footer{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        box-sizing: border-box;
+        align-items:normal;
+        justify-content: space-around;
+        background-color: #100E1D ;
+
+
+        //ESTILOS LINKS
+
+        .nav{
+            display: flex;
+            flex-direction: column;
+            
+            a{
+                text-decoration: none;
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 36px;
+
+                &:hover{
+                    color: grey;
+                }
+
+            }
+            
+            
+        }
+
+        //REDES SOCIALES
+
+        .redes-sociales{
+            h3{
+                color: #F2F2F2;
+                font-family: Heebo;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+            div{
+                img{
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        //CONTACTO
+
+        .contact-mail{
+            width: 25%;
+            
+            .message{
+                color:#F2F2F2;
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }  
+            div{
+
+                display: flex;
+                align-items: center;
+                background-color: #F2F2F2;
+                border-radius: 12px;
+                padding: 2px;
+                height: 57px;
+                width: 350px;
+                margin-top: 5px;
+
+                .email-input{
+                    appearance: none; // Elimina estilos predeterminados de algunos navegadores (puede no ser compatible en todos los navegadores)
+                    border: none;     // Elimina el borde
+                    outline: none;    // Elimina el contorno al enfocar el elemento
+                    background: none; // Fondo transparente
+                    padding: 0;       // Elimina el relleno
+                    margin: 0;        // Elimina el margen
+                
+                    // Otros estilos personalizados según tus necesidades
+                    color:#BDBDBD;
+                    font-family: Poppins;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    padding: 1px;
+                    padding-left: 20px;
+                    width: 80%;
+                }
+                .email-submit{
+
+                    appearance: none; // Elimina estilos predeterminados de algunos navegadores (puede no ser compatible en todos los navegadores)
+                    border: none;     // Elimina el borde
+                    outline: none;    // Elimina el contorno al enfocar el elemento
+                    background: none; // Fondo transparente
+                    padding: 0;       // Elimina el relleno
+                    margin: 0; 
+
+                    // mis estilos
+                    border-radius: 12px;
+                    background: #2D9CDB;
+                    width: 94px;
+                    height: 49px;
+                    color: #F2F2F2;
+                    font-family: Poppins;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    margin-right: 4px;
+
+                }       
+            }
+        }
+    }
+
+    //titulos finales
+
+
+    .creador{
+        background-color: #100E1D;
+        color: #F2F2F2;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 80px;
+    }
+
+
+
+    @media screen and (min-width: 480px) and (max-width: 1100px){
+        
+        .footer{
+            display: flex;
+            flex-direction: column;
+            padding-left: 40px;
+            gap: 40px;
+
+            .nav{
+                width: 100%;
+                align-items: center;
+            }
+            .redes-sociales{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-mail{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+
+    @media(max-width:480px){
+        .footer{
+            display: flex;
+            flex-direction: column;
+            padding-left: 40px;
+            gap: 40px;
+
+            .nav{
+                align-items:flex-start;
+            }
+            .redes-sociales{
+                align-items:flex-start;
+            }
+            .contact-mail{
+                display: flex;
+                align-items:flex-start;
+                .message{
+                    font-size: 10px;
+                }  
+                div{
+                    height: 48px;
+                    width: 290px;
+                    .email-input{
+                        font-size: 14px;
+                    }
+                    .email-submit{
+                        border-radius: 8px;
+                        width: 88px;
+                    
+  
+                    }       
+                }               
+            }
+        }
+    }
+}
+
