@@ -27,7 +27,7 @@ export const Offer = () => {
                     <img className='product-logo' alt='logo' src={codigo}/>
                     <h3 className='product-name'>Front End</h3>
                     <p className='product-description'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
-                    <a className='product-link' href='www.linkedin.com/in/gadetru'>Get started</a>
+                    <a className='product-link' href='https://www.linkedin.com/in/gadetru'>Get started</a>
                     
                 </div>
                 <div className='products'>
